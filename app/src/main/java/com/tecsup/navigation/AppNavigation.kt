@@ -6,12 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.tecsup.screens.CourseDetailScreen
-import com.tecsup.screens.CoursesScreen
-import com.tecsup.screens.HomeScreen
-import com.tecsup.screens.LoginScreen
-import com.tecsup.screens.RegisterScreen
-import com.tecsup.screens.ProfileScreen
+import com.tecsup.screens.*
 
 @Composable
 fun AppNavigation() {
@@ -21,10 +16,12 @@ fun AppNavigation() {
         navController = navController,
         startDestination = Screen.Login.route
     ) {
+        // Pantalla de Login
         composable(Screen.Login.route) {
             LoginScreen(
                 onLoginClick = {
                     navController.navigate(Screen.Home.route) {
+                        popUpTo(Screen.Login.route) { inclusive = true }
                     }
                 },
                 onRegisterClick = {
@@ -33,18 +30,21 @@ fun AppNavigation() {
             )
         }
 
+        // Pantalla de Registro
         composable(Screen.Register.route) {
             RegisterScreen(
                 onRegisterSuccess = {
-                    navController.navigate(Screen.Home.route)
+                    navController.navigate(Screen.Home.route) {
+                        popUpTo(Screen.Login.route) { inclusive = true }
+                    }
                 },
-
                 onBackToLogin = {
                     navController.popBackStack()
                 }
             )
         }
 
+        // Pantalla Principal (Dashboard)
         composable(Screen.Home.route) {
             HomeScreen(
                 onCoursesClick = {
@@ -56,6 +56,7 @@ fun AppNavigation() {
             )
         }
 
+        // Pantalla de Explorar Cursos
         composable(Screen.Courses.route) {
             CoursesScreen(
                 onBackClick = {
@@ -67,6 +68,7 @@ fun AppNavigation() {
             )
         }
 
+        // Pantalla de Detalle del Curso
         composable(
             route = Screen.CourseDetail.route,
             arguments = listOf(
@@ -85,6 +87,7 @@ fun AppNavigation() {
             )
         }
 
+        // Pantalla de Perfil
         composable(Screen.Profile.route) {
             ProfileScreen(
                 onBackClick = {

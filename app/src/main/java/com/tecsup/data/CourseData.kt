@@ -1,5 +1,6 @@
 package com.tecsup.data
 
+import com.tecsup.R
 import com.tecsup.model.Course
 
 object CourseData {
@@ -12,7 +13,8 @@ object CourseData {
             category = "Programación",
             description = "Aprende Kotlin desde cero para desarrollar apps Android profesionales.",
             duration = "20 horas",
-            imageRes = 0,
+            progress = 0.25f,
+            image = R.drawable.ic_launcher_background,
             isPopular = true
         ),
         Course(
@@ -23,7 +25,8 @@ object CourseData {
             category = "Programación",
             description = "Domina Jetpack Compose y crea UI modernas y declarativas.",
             duration = "25 horas",
-            imageRes = 0
+            progress = 0.50f,
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 3,
@@ -33,7 +36,8 @@ object CourseData {
             category = "Diseño",
             description = "Aprende los principios del diseño de interfaces y experiencia de usuario.",
             duration = "15 horas",
-            imageRes = 0,
+            progress = 0.75f,
+            image = R.drawable.ic_launcher_background,
             isNew = true
         ),
         Course(
@@ -44,7 +48,8 @@ object CourseData {
             category = "Negocios",
             description = "Estrategias de marketing digital para hacer crecer tu negocio.",
             duration = "18 horas",
-            imageRes = 0
+            progress = 0.40f,
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 5,
@@ -54,7 +59,8 @@ object CourseData {
             category = "Diseño",
             description = "Diseña prototipos y interfaces profesionales con Figma.",
             duration = "12 horas",
-            imageRes = 0
+            progress = 0.90f,
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 6,
@@ -64,7 +70,8 @@ object CourseData {
             category = "Negocios",
             description = "Metodologías ágiles y gestión de equipos de trabajo.",
             duration = "22 horas",
-            imageRes = 0,
+            progress = 0.15f,
+            image = R.drawable.ic_launcher_background,
             isPopular = true
         )
     )
