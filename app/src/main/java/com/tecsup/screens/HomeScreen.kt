@@ -24,7 +24,7 @@ fun HomeScreen(
                 .padding(24.dp)
         ) {
             Text(
-                text = "Hola, Adriana",
+                text = "Hola, Estudiante",
                 style = MaterialTheme.typography.headlineMedium
             )
 
