@@ -89,6 +89,9 @@ fun AppNavigation() {
             ProfileScreen(
                 onBackClick = {
                     navController.popBackStack()
+                },
+                onExploreClick = {
+                    navController.navigate(Screen.Courses.route)
                 }
             )
         }

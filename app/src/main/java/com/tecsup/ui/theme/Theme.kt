@@ -12,19 +12,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = PrimaryDark,
+    secondary = SecondaryVibrant,
+    tertiary = TertiaryVibrant,
+    background = BackgroundDark,
+    surface = SurfaceDark
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = PrimaryVibrant,
+    secondary = SecondaryVibrant,
+    tertiary = TertiaryVibrant,
+    background = BackgroundLight,
+    surface = SurfaceLight
 
     /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
     onPrimary = Color.White,
     onSecondary = Color.White,
     onTertiary = Color.White,
@@ -37,7 +39,7 @@ private val LightColorScheme = lightColorScheme(
 fun EduTech_AcademyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false, // Desactivado para mantener consistencia visual
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
