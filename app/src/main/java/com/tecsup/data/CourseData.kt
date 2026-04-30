@@ -1,5 +1,6 @@
 package com.tecsup.data
 
+import com.tecsup.R
 import com.tecsup.model.Course
 
 object CourseData {
@@ -13,7 +14,7 @@ object CourseData {
             description = "Aprende Kotlin desde cero para desarrollar apps Android profesionales.",
             duration = "20 horas",
             progress = 0.25f,
-            imageRes = 0,
+            image = R.drawable.ic_launcher_background,
             isPopular = true
         ),
         Course(
@@ -25,7 +26,7 @@ object CourseData {
             description = "Domina Jetpack Compose y crea UI modernas y declarativas.",
             duration = "25 horas",
             progress = 0.50f,
-            imageRes = 0
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 3,
@@ -36,7 +37,7 @@ object CourseData {
             description = "Aprende los principios del diseño de interfaces y experiencia de usuario.",
             duration = "15 horas",
             progress = 0.75f,
-            imageRes = 0,
+            image = R.drawable.ic_launcher_background,
             isNew = true
         ),
         Course(
@@ -48,7 +49,7 @@ object CourseData {
             description = "Estrategias de marketing digital para hacer crecer tu negocio.",
             duration = "18 horas",
             progress = 0.40f,
-            imageRes = 0
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 5,
@@ -59,7 +60,7 @@ object CourseData {
             description = "Diseña prototipos y interfaces profesionales con Figma.",
             duration = "12 horas",
             progress = 0.90f,
-            imageRes = 0
+            image = R.drawable.ic_launcher_background
         ),
         Course(
             id = 6,
@@ -70,7 +71,7 @@ object CourseData {
             description = "Metodologías ágiles y gestión de equipos de trabajo.",
             duration = "22 horas",
             progress = 0.15f,
-            imageRes = 0,
+            image = R.drawable.ic_launcher_background,
             isPopular = true
         )
     )

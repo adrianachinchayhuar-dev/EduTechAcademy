@@ -9,7 +9,7 @@ data class Course(
     val description: String,
     val duration: String,
     val progress: Float,
-    val imageRes: Int,
+    val image: Int,
     val isPopular: Boolean = false,
     val isNew: Boolean = false
 )
