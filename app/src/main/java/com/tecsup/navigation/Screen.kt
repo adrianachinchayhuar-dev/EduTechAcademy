@@ -12,5 +12,8 @@ sealed class Screen(val route: String) {
         fun createRoute(courseId: Int): String {
             return "course_detail/$courseId"
         }
+        fun passId(courseId: Int): String {
+            return "course_detail/$courseId"
+        }
     }
 }

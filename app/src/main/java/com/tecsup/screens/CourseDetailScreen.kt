@@ -12,6 +12,8 @@ import androidx.navigation.NavController
 import com.tecsup.data.CourseData
 import com.tecsup.navigation.Screen
 
+
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CourseDetailScreen(
     navController: NavController,

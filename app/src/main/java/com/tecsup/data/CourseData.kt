@@ -12,6 +12,7 @@ object CourseData {
             category = "Programación",
             description = "Aprende Kotlin desde cero para desarrollar apps Android profesionales.",
             duration = "20 horas",
+            progress = 0.65f,
             imageRes = 0,
             isPopular = true
         ),
@@ -23,6 +24,7 @@ object CourseData {
             category = "Programación",
             description = "Domina Jetpack Compose y crea UI modernas y declarativas.",
             duration = "25 horas",
+            progress = 0.65f,
             imageRes = 0
         ),
         Course(
@@ -33,6 +35,7 @@ object CourseData {
             category = "Diseño",
             description = "Aprende los principios del diseño de interfaces y experiencia de usuario.",
             duration = "15 horas",
+            progress = 0.65f,
             imageRes = 0,
             isNew = true
         ),
@@ -44,6 +47,7 @@ object CourseData {
             category = "Negocios",
             description = "Estrategias de marketing digital para hacer crecer tu negocio.",
             duration = "18 horas",
+            progress = 0.65f,
             imageRes = 0
         ),
         Course(
@@ -54,6 +58,7 @@ object CourseData {
             category = "Diseño",
             description = "Diseña prototipos y interfaces profesionales con Figma.",
             duration = "12 horas",
+            progress = 0.65f,
             imageRes = 0
         ),
         Course(
@@ -64,6 +69,7 @@ object CourseData {
             category = "Negocios",
             description = "Metodologías ágiles y gestión de equipos de trabajo.",
             duration = "22 horas",
+            progress = 0.65f,
             imageRes = 0,
             isPopular = true
         )
