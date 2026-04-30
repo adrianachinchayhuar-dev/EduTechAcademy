@@ -16,7 +16,7 @@ import com.tecsup.navigation.Screen
 @Composable
 fun CoursesScreen(navController: NavController) {
     var selectedCategory by remember { mutableStateOf("Todos") }
-    val categories = listOf("Todos", "Programacion", "Diseno", "Negocios")
+    val categories = listOf("Todos", "Programación", "Diseño", "Negocios")
 
     val filteredCourses = if (selectedCategory == "Todos") {
         CourseData.courseList
@@ -51,7 +51,7 @@ fun CoursesScreen(navController: NavController) {
                 CourseCard(
                     course = course,
                     onClick = {
-                        navController.navigate(Screen.CourseDetail.passId(course.id))
+                        navController.navigate(Screen.CourseDetail.createRoute(course.id))
                     }
                 )
             }
