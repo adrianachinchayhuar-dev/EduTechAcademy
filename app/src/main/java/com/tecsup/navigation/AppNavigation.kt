@@ -58,12 +58,7 @@ fun AppNavigation() {
 
         composable(Screen.Courses.route) {
             CoursesScreen(
-                onBackClick = {
-                    navController.popBackStack()
-                },
-                onCourseClick = { courseId ->
-                    navController.navigate(Screen.CourseDetail.createRoute(courseId))
-                }
+                navController = navController
             )
         }
 
@@ -78,10 +73,8 @@ fun AppNavigation() {
             val courseId = backStackEntry.arguments?.getInt("courseId") ?: 0
 
             CourseDetailScreen(
-                courseId = courseId,
-                onBackClick = {
-                    navController.popBackStack()
-                }
+                navController = navController,
+                courseId = courseId
             )
         }
 

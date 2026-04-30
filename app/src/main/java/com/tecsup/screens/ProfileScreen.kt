@@ -10,13 +10,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.tecsup.data.CourseData
+import com.tecsup.components.ProgressBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen(
     onBackClick: () -> Unit
 ) {
-    val enrolledCourses = CourseData.courses.take(3)
+    val enrolledCourses = CourseData.courseList.take(3)
 
     Scaffold(
         topBar = {
@@ -82,16 +83,9 @@ fun ProfileScreen(
 
                         Spacer(modifier = Modifier.height(8.dp))
 
-                        LinearProgressIndicator(
-                            progress = { course.progress / 100f },
+                        ProgressBar(
+                            progress = course.progress,
                             modifier = Modifier.fillMaxWidth()
-                        )
-
-                        Spacer(modifier = Modifier.height(4.dp))
-
-                        Text(
-                            text = "Progreso: ${course.progress}%",
-                            style = MaterialTheme.typography.bodySmall
                         )
                     }
                 }
